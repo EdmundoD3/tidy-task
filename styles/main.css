@@ -1,0 +1,117 @@
+html {
+  font-size: 14px;
+}
+body {
+  margin: 0 3px;
+}
+.box {
+  padding: 0;
+  border-radius: 10px;
+  margin: 1rem 0 0;
+  max-width: 750px;
+}
+
+#divTasks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0.5rem;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+#textTask {
+  width: 100%;
+  border-radius: 5px;
+  resize: none;
+  font-size: 1em;
+  padding: 0;
+  height: 250px;
+}
+
+.label-title {
+  font-family: 'Lucida Sans', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.btn-success {
+  background: #4CAF50;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 15px;
+}
+
+.new-taskBtn {
+  display: grid;
+  background: #eee;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  border: none;
+}
+
+.box-newTask {
+  display: block;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.06s ease;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+#sub-tasks {
+  display: none;
+  margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    margin: 0 8px;
+  }
+  .box {
+    margin: 0.5rem auto 1rem;
+  }
+  
+  #textTask {
+    height: 100px;
+  }
+  #divTasks {
+    padding: 1rem;
+  }
+}
+
+/* Estilo de la barra de desplazamiento para Chrome/Safari */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del pulgar */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color al pasar el ratón */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo de la barra */
+  border-radius: 10px; /* Bordes redondeados */
+}

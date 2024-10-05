@@ -1,0 +1,23 @@
+.draggable {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: move;
+  -webkit-user-select: none; /* Safari y otros navegadores basados en WebKit */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+
+.taskBox.dragging {
+  opacity: 0.5;
+  background-color: #f0f0f0;
+}
+
+.taskBox.over {
+  border: 2px dashed #007bff;
+}

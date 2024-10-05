@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mis tareas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="/styles/main.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./modal/modal.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./modules/draggable.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/task.css">
+  <script src="/modules/helpers.js"></script>
+  <script src="/modules/generateComponents.js"></script>
+  <script src="/modules/TimeAlert.js"></script>
+  <script src="/modules/SubTaskManager.js"></script>
+  <script src="/modules/TaskManager.js"></script>
+
+  <script src="/modal/modal.js" defer></script>
+  <script src="main.js" defer></script>
+
+</head>
+
+<body>
+  <div class="box">
+    <!-- Botón para abrir el modal -->
+    <button id="openModal" class="button new-taskBtn">Agregar Tarea</button>
+  </div>
+
+  <div class="box" id="divTasks">
+    <h3>Agrega Tareas nuevas</h3>
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <div class="box-newTask">
+        <div class="title-input">
+          <label for="titleTask" class="label-title">Título:</label>
+          <input id="titleTask" class="input-standard box-newTask-input" maxlength="60" type="text" placeholder="Ingrese el título">
+        </div>
+
+        <div class="time-input">
+          <div class="time-input-item">
+            <label for="startTask" class="label-title">Inicio:</label>
+            <input type="time" id="startTask" class="input-standard box-newTask-input box-newTask-input-time" name="startTask">
+          </div>
+
+          <div class="time-input-item">
+            <label for="endTask" class="label-title">Fin:</label>
+            <input type="time" id="endTask" class="input-standard box-newTask-input box-newTask-input-time" name="endTask">
+          </div>
+        </div>
+
+        <div class="title-input"> 
+          <!-- <label for="subTask">Nueva tarea</label> -->
+          <input id="subTask" class="input-standard input-sub-task box-newTask-input" maxlength="100"
+            placeholder="Ingrese una sub-tarea">
+          <button id="add-sub-task-btn" onclick="subTaskManager.add()" class="btn btn-success">Agregar</button>
+        </div>
+        <ol id="sub-tasks" class="sub-tasks"></ol>
+
+        <button id="add-task-btn" onclick="taskManager.add()" class="btn btn-success">Guardar</button>
+        <button id="edit-task-btn" onclick="taskManager.edit()" class="btn btn-success ocult">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
